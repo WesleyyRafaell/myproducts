@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    color: #6E2A36;
+    background: #F9F2E4;
+}
+
+@layer utilities {
+    .center {
+        @apply justify-center items-center
+    }
+}
