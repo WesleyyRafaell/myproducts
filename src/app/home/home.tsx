@@ -1,11 +1,13 @@
+'use client'
+
 import { Box } from '@/components/atoms'
-import { Header } from '@/components/molecules'
+import { Header, BannerSlider } from '@/components/molecules'
 
 const Home = () => {
   return (
     <Box>
       <Header />
-      <p>home</p>
+      <BannerSlider />
     </Box>
   )
 }

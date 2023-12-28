@@ -4,6 +4,9 @@ import type { Metadata } from 'next'
 import { Nunito_Sans } from 'next/font/google'
 import '@/styles/index.css'
 
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
+
 const nunito = Nunito_Sans({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
