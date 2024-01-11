@@ -1,5 +1,5 @@
-import Home from './home'
+import View from './view'
 
-export default function App() {
-  return <Home />
+export default function Home() {
+  return <View />
 }
