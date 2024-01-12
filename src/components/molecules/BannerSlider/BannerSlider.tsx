@@ -1,3 +1,4 @@
+import { Box } from '@/components/atoms'
 import Image from 'next/image'
 import Slider, { Settings } from 'react-slick'
 
@@ -19,14 +20,16 @@ const settings: Settings = {
 
 const BannerSlider = () => {
   return (
-    <Slider {...settings}>
-      <div>
-        <Image width={1920} height={620} alt="banner" src="/banner.png" />
-      </div>
-      <div>
-        <Image width={1920} height={620} alt="banner2" src="/banner2.png" />
-      </div>
-    </Slider>
+    <Box className="h-[28.15rem]">
+      <Slider {...settings}>
+        <div>
+          <Image width={1920} height={620} alt="banner" src="/banner.png" />
+        </div>
+        <div>
+          <Image width={1920} height={620} alt="banner2" src="/banner2.png" />
+        </div>
+      </Slider>
+    </Box>
   )
 }
 
