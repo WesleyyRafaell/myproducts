@@ -5,7 +5,7 @@ import { RiShoppingCartLine } from 'react-icons/ri'
 
 const Header = () => {
   return (
-    <Flex className="w-full h-[5.625rem] center">
+    <Flex className="w-full h-[5.625rem] center fixed top-0 left-0 z-50 bg-white">
       <Flex className="w-full max-w-[81.25rem] gap-[3.75rem]">
         <Image
           src="/logomyproducts.png"

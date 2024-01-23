@@ -15,6 +15,7 @@ const config: Config = {
         pink: '#F9F2E4',
         salmon: '#F3D8BB',
         gray: '#A8A8A8',
+        white: '#ffffff',
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
