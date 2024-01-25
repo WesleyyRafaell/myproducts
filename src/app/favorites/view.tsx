@@ -1,12 +1,8 @@
 'use client'
 
-import { Box, Button, Flex } from '@/components/atoms'
-import {
-  Header,
-  BannerSlider,
-  Footer,
-  CardProduct,
-} from '@/components/molecules'
+import { Box, Flex, Input } from '@/components/atoms'
+import { CardProduct, Footer, Header } from '@/components/molecules'
+import { IoSearchOutline } from 'react-icons/io5'
 
 const View = () => {
   return (
@@ -14,23 +10,20 @@ const View = () => {
       <Box className="mb-[5.6125rem]">
         <Header />
       </Box>
-      <BannerSlider />
+      <Box className="center h-[12.5rem] bg-salmon">
+        <h3 className="text-[2.8rem] text-primary font-bold">Favoritos</h3>
+      </Box>
       <main>
         <Box className="w-full center pt-8">
           <Box className="w-full max-w-[81.25rem]">
-            {[1, 2].map((item) => (
-              <Box key={item}>
-                <h3 className="text-[2rem] text-purple font-bold">Camisas</h3>
-                <Flex className="justify-center gap-10">
-                  {[1, 2, 3, 4].map((item) => (
-                    <CardProduct key={item} />
-                  ))}
-                </Flex>
-                <Box className="center">
-                  <Button>Ver todos</Button>
-                </Box>
-              </Box>
-            ))}
+            <Box className="py-8 w-[21.4375rem]">
+              <Input placeholder="teste" icon={IoSearchOutline} />
+            </Box>
+            <Flex className="gap-4 justify-between flex-wrap">
+              {[1, 2, 3, 4, 5, 6, 7, 8].map((item) => (
+                <CardProduct key={item} />
+              ))}
+            </Flex>
           </Box>
         </Box>
       </main>

@@ -1,9 +1,19 @@
 import { Box, Flex } from '@/components/atoms'
 import Image from 'next/image'
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import { FaRegHeart } from 'react-icons/fa'
 import { RiShoppingCartLine } from 'react-icons/ri'
 
+const navLinks = [
+  { name: 'Home', href: '/' },
+  { name: 'Products', href: '/products' },
+  { name: 'Favoritos', href: '/favorites' },
+]
+
 const Header = () => {
+  const pathname = usePathname()
+
   return (
     <Flex className="w-full h-[5.625rem] center fixed top-0 left-0 z-50 bg-white">
       <Flex className="w-full max-w-[81.25rem] gap-[3.75rem]">
@@ -14,9 +24,21 @@ const Header = () => {
           height={50}
         />
         <Flex className="items-center gap-[2.1875rem] flex-1">
-          <p className="font-bold text-primary hover:text-primary">Home</p>
-          <p className="font-bold hover:text-primary">Produtos</p>
-          <p className="font-bold hover:text-primary">Favoritos</p>
+          {navLinks.map((item) => {
+            const isActive = pathname === item.href
+
+            return (
+              <Link key={item.name} href={item.href}>
+                <p
+                  className={`font-bold ${
+                    isActive ? 'text-primary' : ''
+                  } hover:text-primary`}
+                >
+                  {item.name}
+                </p>
+              </Link>
+            )
+          })}
         </Flex>
         <Flex className="gap-7 items-center">
           <Box className="relative">
