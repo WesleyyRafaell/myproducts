@@ -1,6 +1,6 @@
 'use client'
 
-import { Box, Flex, Input } from '@/components/atoms'
+import { Box, Flex, Input, TitlePage } from '@/components/atoms'
 import { CardProduct, Footer, Header } from '@/components/molecules'
 import { IoSearchOutline } from 'react-icons/io5'
 
@@ -10,9 +10,7 @@ const View = () => {
       <Box className="mb-[5.6125rem]">
         <Header />
       </Box>
-      <Box className="center h-[12.5rem] bg-salmon">
-        <h3 className="text-[2.8rem] text-primary font-bold">Favoritos</h3>
-      </Box>
+      <TitlePage title="Favoritos" />
       <main>
         <Box className="w-full center pt-8">
           <Box className="w-full max-w-[81.25rem]">

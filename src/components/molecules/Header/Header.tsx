@@ -7,7 +7,7 @@ import { RiShoppingCartLine } from 'react-icons/ri'
 
 const navLinks = [
   { name: 'Home', href: '/' },
-  { name: 'Products', href: '/products' },
+  { name: 'Produtos', href: '/products' },
   { name: 'Favoritos', href: '/favorites' },
 ]
 
