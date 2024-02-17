@@ -1,6 +1,6 @@
 'use client'
 
-import { Box, Flex, Input, TitlePage } from '@/components/atoms'
+import { Box, Container, Flex, Input, TitlePage } from '@/components/atoms'
 import { CardProduct, Footer, Header } from '@/components/molecules'
 import { IoSearchOutline } from 'react-icons/io5'
 
@@ -11,7 +11,7 @@ const View = () => {
       <TitlePage title="Produtos" />
       <main>
         <Box className="w-full center pt-8">
-          <Box className="w-full max-w-[81.25rem]">
+          <Container>
             <Flex>
               <Box className="w-[30%] gap-2 pt-[8.9812rem] items-start">
                 <p className="text-[1.375rem] font-semibold cursor-pointer text-primary">
@@ -38,27 +38,10 @@ const View = () => {
                 </Flex>
               </Box>
             </Flex>
-          </Box>
+          </Container>
         </Box>
       </main>
-      <Footer
-        contactsInfo={[
-          {
-            id: '1',
-            address:
-              'Lorem ipsum dollor asit amet Lorem ipsum dollor asit amet',
-            tell: '(98) 989101258',
-            email: 'rafaelsanto10s@gmail.com',
-          },
-          {
-            id: '2',
-            address:
-              'Lorem ipsum dollor asit amet Lorem ipsum dollor asit amet',
-            tell: '(98) 989101258',
-            email: 'rafaelsanto10s@gmail.com',
-          },
-        ]}
-      />
+      <Footer />
     </Box>
   )
 }

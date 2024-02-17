@@ -1,6 +1,8 @@
 export { default as Box } from './Box'
 export { default as Button } from './Button'
 export { default as ContactCard } from './ContactCard'
+export { default as Container } from './Container'
+export { default as Count } from './Count'
 export { default as Flex } from './Flex'
 export { default as Input } from './Input'
 export { default as TitlePage } from './TitlePage'

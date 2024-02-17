@@ -1,6 +1,6 @@
 'use client'
 
-import { Box, Flex, Input, TitlePage } from '@/components/atoms'
+import { Box, Container, Flex, Input, TitlePage } from '@/components/atoms'
 import { CardProduct, Footer, Header } from '@/components/molecules'
 import { IoSearchOutline } from 'react-icons/io5'
 
@@ -11,7 +11,7 @@ const View = () => {
       <TitlePage title="Favoritos" />
       <main>
         <Box className="w-full center pt-8">
-          <Box className="w-full max-w-[81.25rem]">
+          <Container>
             <Box className="py-8 w-[21.4375rem]">
               <Input placeholder="teste" icon={IoSearchOutline} />
             </Box>
@@ -20,27 +20,10 @@ const View = () => {
                 <CardProduct key={item} />
               ))}
             </Flex>
-          </Box>
+          </Container>
         </Box>
       </main>
-      <Footer
-        contactsInfo={[
-          {
-            id: '1',
-            address:
-              'Lorem ipsum dollor asit amet Lorem ipsum dollor asit amet',
-            tell: '(98) 989101258',
-            email: 'rafaelsanto10s@gmail.com',
-          },
-          {
-            id: '2',
-            address:
-              'Lorem ipsum dollor asit amet Lorem ipsum dollor asit amet',
-            tell: '(98) 989101258',
-            email: 'rafaelsanto10s@gmail.com',
-          },
-        ]}
-      />
+      <Footer />
     </Box>
   )
 }

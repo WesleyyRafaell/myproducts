@@ -1,9 +1,8 @@
 'use client'
-import { Box, Flex } from '@/components/atoms'
+import { Box, Container, Count, Flex } from '@/components/atoms'
 import { Footer, Header } from '@/components/molecules'
 import Image from 'next/image'
 import { useState } from 'react'
-import { FaPlus, FaMinus } from 'react-icons/fa6'
 
 const arrayImages = [
   { id: 1, url: '/camisa3.webp' },
@@ -23,7 +22,7 @@ const View = () => {
       <Header />
       <main>
         <Box className="w-full center pt-8">
-          <Box className="w-full max-w-[81.25rem]">
+          <Container>
             <Flex className="justify-between">
               <Box className="w-[50%]">
                 <Flex className="justify-between items-start">
@@ -66,11 +65,7 @@ const View = () => {
                   id, bibendum leo, suscipit sed, congue vel , nisl.
                 </p>
                 <Flex className="pt-5 gap-5">
-                  <Flex className="w-[8rem] px-3 justify-between border border-primary rounded-2xl items-center">
-                    <FaMinus className="cursor-pointer" />
-                    <p>1</p>
-                    <FaPlus className="cursor-pointer" />
-                  </Flex>
+                  <Count />
                   <button className="bg-secondary text-white px-[5.5625rem] py-3 rounded-2xl">
                     Adicionar ao carrinho
                   </button>
@@ -83,27 +78,10 @@ const View = () => {
                 </Box>
               </Box>
             </Flex>
-          </Box>
+          </Container>
         </Box>
       </main>
-      <Footer
-        contactsInfo={[
-          {
-            id: '1',
-            address:
-              'Lorem ipsum dollor asit amet Lorem ipsum dollor asit amet',
-            tell: '(98) 989101258',
-            email: 'rafaelsanto10s@gmail.com',
-          },
-          {
-            id: '2',
-            address:
-              'Lorem ipsum dollor asit amet Lorem ipsum dollor asit amet',
-            tell: '(98) 989101258',
-            email: 'rafaelsanto10s@gmail.com',
-          },
-        ]}
-      />
+      <Footer />
     </Box>
   )
 }
