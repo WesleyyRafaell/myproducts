@@ -11,9 +11,7 @@ import {
 const View = () => {
   return (
     <Box>
-      <Box className="mb-[5.6125rem]">
-        <Header />
-      </Box>
+      <Header />
       <BannerSlider />
       <main>
         <Box className="w-full center pt-8">

@@ -7,9 +7,7 @@ import { IoSearchOutline } from 'react-icons/io5'
 const View = () => {
   return (
     <Box>
-      <Box className="mb-[5.6125rem]">
-        <Header />
-      </Box>
+      <Header />
       <TitlePage title="Produtos" />
       <main>
         <Box className="w-full center pt-8">

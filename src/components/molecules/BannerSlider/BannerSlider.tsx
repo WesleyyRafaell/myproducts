@@ -20,7 +20,7 @@ const settings: Settings = {
 
 const BannerSlider = () => {
   return (
-    <Box className="h-[28.15rem]">
+    <Box className="max-w-[1799px]">
       <Slider {...settings}>
         <div>
           <Image width={1920} height={620} alt="banner" src="/banner.png" />
