@@ -45,18 +45,22 @@ const Header = () => {
               })}
             </Flex>
             <Flex className="gap-7 items-center">
-              <Box className="relative">
-                <FaRegHeart className="text-purple text-lg" />
-                <Box className="absolute top-[-0.9563rem] right-[-1.1938rem] bg-secondary center rounded-full w-[1.25rem] h-[1.25rem]">
-                  <p className="text-white text-sm">0</p>
+              <Link href="/favorites">
+                <Box className="relative">
+                  <FaRegHeart className="text-purple text-lg" />
+                  <Box className="absolute top-[-0.9563rem] right-[-1.1938rem] bg-secondary center rounded-full w-[1.25rem] h-[1.25rem]">
+                    <p className="text-white text-sm">0</p>
+                  </Box>
                 </Box>
-              </Box>
-              <Box className="relative">
-                <RiShoppingCartLine className="text-purple text-lg" />
-                <Box className="absolute top-[-0.9563rem] right-[-1.1938rem] bg-secondary center rounded-full w-[1.25rem] h-[1.25rem]">
-                  <p className="text-white text-sm">0</p>
+              </Link>
+              <Link href="cart">
+                <Box className="relative">
+                  <RiShoppingCartLine className="text-purple text-lg" />
+                  <Box className="absolute top-[-0.9563rem] right-[-1.1938rem] bg-secondary center rounded-full w-[1.25rem] h-[1.25rem]">
+                    <p className="text-white text-sm">0</p>
+                  </Box>
                 </Box>
-              </Box>
+              </Link>
             </Flex>
           </Flex>
         </Container>

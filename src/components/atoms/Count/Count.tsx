@@ -17,7 +17,7 @@ const Count = () => {
   }
 
   return (
-    <Flex className="w-[8rem] px-3 justify-between border border-primary rounded-2xl items-center">
+    <Flex className="w-[8rem] h-full px-3 justify-between border border-primary rounded-2xl items-center">
       <button
         disabled={total <= 1}
         onClick={() => handleTotal('minus')}
