@@ -1,21 +1,16 @@
-/* eslint-disable no-use-before-define */
-export interface ICategoryGateway {
-  getAllCategories(
-    filters: IGetAllCategoriesParams,
-  ): Promise<IGetAllCategoriesResponse>
-}
-
-export interface IGetAllCategoriesParams {
+export interface IGetProductsParams {
   filters: string
 }
 
-export interface IGetAllCategoriesResponse {
+export interface IGetProductsResponse {
   data: [
     {
       id: number
       attributes: {
         title: string
-        isHome: boolean
+        description: string
+        price: number
+        in_stock: true
         createdAt: string
         updatedAt: string
         publishedAt: string
@@ -31,4 +26,8 @@ export interface IGetAllCategoriesResponse {
       total: number
     }
   }
+}
+
+export interface IProductGateway {
+  getProducts(filters: IGetProductsParams): Promise<IGetProductsResponse>
 }

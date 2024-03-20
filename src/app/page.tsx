@@ -1,6 +1,7 @@
 import { ICategoryEntity, IServerSideBaseProps } from '@/types/commom'
 import CategoryGateway from '@/contracts/api/category'
 import Controller from './controller'
+import ProductContract from '@/contracts/product'
 
 export default async function Home() {
   const paginationProps = {
@@ -17,7 +18,10 @@ export default async function Home() {
   }
 
   try {
-    const { data, meta } = await CategoryGateway.getAllCategories()
+    ProductContract.getProducts.execute({ filters: '' }, (response) => {})
+    const { data, meta } = await CategoryGateway.getAllCategories({
+      filters: 'filters[isHome][$eq]=true',
+    })
 
     props.data = data
     props.meta = meta

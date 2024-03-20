@@ -5,7 +5,5 @@ export default function Controller({
   data,
   meta,
 }: IServerSideBaseProps<ICategoryEntity>) {
-  console.log(`data`, data)
-  console.log(`meta`, meta)
   return <View />
 }
