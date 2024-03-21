@@ -10,7 +10,7 @@ const ProductGateway: IProductGateway = {
     params: IGetProductsParams,
   ): Promise<IGetProductsResponse> => {
     const instance = getInstance()
-    const { data } = await instance.get(`categories?${params.filters}`)
+    const { data } = await instance.get(`products?${params.filters}`)
 
     return data as IGetProductsResponse
   },

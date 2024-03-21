@@ -1,3 +1,5 @@
+import { IGetProductsResponseData } from '.'
+
 /* eslint-disable no-use-before-define */
 export interface ICategoryGateway {
   getAllCategories(
@@ -20,6 +22,9 @@ export interface IGetAllCategoriesResponse {
         updatedAt: string
         publishedAt: string
         title_url: string
+        products: {
+          data: IGetProductsResponseData[]
+        }
       }
     },
   ]
