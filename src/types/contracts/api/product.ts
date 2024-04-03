@@ -7,7 +7,7 @@ export interface IGetProductsResponseData {
   attributes: {
     title: string
     description: string
-    price: number
+    price: string
     in_stock: true
     createdAt: string
     updatedAt: string

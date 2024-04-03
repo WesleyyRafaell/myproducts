@@ -3,7 +3,7 @@ export interface IProductEntity {
   attributes: {
     title: string
     description: string
-    price: number
+    price: string
     in_stock: boolean
     createdAt: string
     updatedAt: string
